@@ -8,7 +8,7 @@ End-to-end procedure to build an **Ascender 25.6.2** automation controller on a 
 | **Target platform** | Ubuntu Server 26.04 LTS (x86_64), physical or virtual |
 | **Topology** | Single node, HTTPS with a corporate PKI certificate |
 
-![Ascender enterprise HLD](docs/architecture/Ascender-Enterprise-HLD.png)
+![Ascender on K3s — Enterprise Installation Guide](docs/images/cover.png)
 
 ## Contents
 
