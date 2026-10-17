@@ -331,7 +331,7 @@ Resolve-DnsName <ASCENDER_FQDN>
 
 **Step 2.2 — Generate the private key and certificate signing request**
 
-Create the TLS directory and the request configuration (reference copy: [`files/etc/ascender/tls/ascender-csr.cnf`](files/etc/ascender/tls/ascender-csr.cnf)), replacing the subject placeholders:
+Create the TLS directory and the request configuration (reference copy: [`files/etc/ascender/tls/ascender-csr.cnf`](files/etc/ascender/tls/ascender-csr.cnf)). Replace the `<...>` subject placeholders in the block below before running it:
 
 ```bash
 install -d -m 0700 /etc/ascender/tls && cd /etc/ascender/tls
@@ -363,10 +363,11 @@ chmod 600 ascender.key
 
 **Step 2.3 — Obtain the certificate and assemble the chain**
 
-Submit `ascender.csr` to the corporate PKI. Place the issued server certificate and the intermediate certificate(s) in PEM format on the server and build the full chain, server certificate first:
+Submit `ascender.csr` to the corporate PKI. Place the issued server certificate (`server.crt`) and the intermediate certificate(s) (`intermediate.crt`) in PEM format in `/etc/ascender/tls` and build the full chain, server certificate first:
 
 ```bash
-cat server.crt intermediate.crt > /etc/ascender/tls/ascender.crt
+cd /etc/ascender/tls
+cat server.crt intermediate.crt > ascender.crt
 openssl x509 -in ascender.crt -noout -subject -issuer -dates -ext subjectAltName
 [ "$(openssl x509 -in ascender.crt -noout -pubkey | sha256sum)" = \
   "$(openssl pkey -in ascender.key -pubout | sha256sum)" ] && echo "key matches certificate"
@@ -543,7 +544,7 @@ git checkout a737ea8        # optional: pin the validated revision
 git log -1 --format='%h %cd %s' --date=short
 ```
 
-The default `inventory` file already targets the local machine and requires no change:
+The default `inventory` file already targets the local machine and requires no change (excerpt, comments omitted):
 
 ```ini
 [localhost]
