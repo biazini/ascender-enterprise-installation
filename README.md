@@ -29,6 +29,7 @@ End-to-end procedure to build an **Ascender 25.6.2** automation controller on a 
 
 ```text
 .
+├── .github/                      Security policy, code of conduct, contributing notes
 ├── README.md                     This procedure
 ├── LICENSE                       MIT License (code and configuration files)
 ├── LICENSE-CC-BY-4.0             CC BY 4.0 (documentation and diagrams)

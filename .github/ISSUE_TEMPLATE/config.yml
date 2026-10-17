@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security problem in this guide
+    url: https://github.com/biazini/ascender-k3s-installation/security/advisories/new
+    about: Report privately through GitHub's private vulnerability reporting.
+  - name: Ascender bugs and questions
+    url: https://github.com/ctrliq/ascender/issues
+    about: Problems with Ascender itself belong to the upstream project.
+  - name: Ascender installer bugs
+    url: https://github.com/ctrliq/ascender-install/issues
+    about: Problems with ascender-install belong to the upstream installer project.

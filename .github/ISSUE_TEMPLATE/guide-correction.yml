@@ -1,0 +1,26 @@
+name: Guide correction
+description: Point out an error or an outdated step in the installation guide.
+title: "[Guide]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository does not accept public issues. Security problems must be reported privately — see the [security policy](https://github.com/biazini/ascender-k3s-installation/security/policy).
+  - type: input
+    id: section
+    attributes:
+      label: Section or file
+      placeholder: e.g. 5.4 Phase 4 — k3s installation, Step 4.2
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: The observed behaviour, with the exact command output if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
