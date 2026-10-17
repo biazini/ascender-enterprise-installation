@@ -61,9 +61,6 @@ End-to-end procedure to build an **Ascender 25.6.2** automation controller on a 
 
 *Figure 2 — Ascender enterprise LLD (source: [`Ascender-Enterprise-LLD.drawio`](docs/architecture/Ascender-Enterprise-LLD.drawio))*
 
-> [!TIP]
-> The `.drawio` sources can be edited with [diagrams.net](https://app.diagrams.net) or the **Draw.io Integration** extension for Visual Studio Code (`hediet.vscode-drawio`).
-
 ### 1.3 Architecture summary
 
 Figure 1 presents the logical view: who consumes the platform, the functional tiers of Ascender, the managed infrastructure and the external dependencies. Figure 2 refines it into the physical deployment on the server, including the corporate DNS, PKI and NTP services and naming every Kubernetes object, host component, port and network path.
