@@ -23,12 +23,15 @@ End-to-end procedure to build an **Ascender 25.6.2** automation controller on a 
 9. [Lessons learned](#9-lessons-learned)
 - [Appendix A — Configuration files](#appendix-a--configuration-files)
 - [Appendix B — References](#appendix-b--references)
+- [License](#license)
 
 ### Repository layout
 
 ```text
 .
 ├── README.md                     This procedure
+├── LICENSE                       MIT License (code and configuration files)
+├── LICENSE-CC-BY-4.0             CC BY 4.0 (documentation and diagrams)
 ├── docs/
 │   ├── architecture/             HLD and LLD (draw.io sources + PNG exports)
 │   └── images/                   Screenshots
@@ -839,3 +842,22 @@ Reference copies of every file created by this procedure are provided in [`files
 | k3s requirements (ports, ufw) | <https://docs.k3s.io/installation/requirements> |
 | k3s networking (ServiceLB, Traefik) | <https://docs.k3s.io/networking/networking-services> |
 | k3s proxy configuration | <https://docs.k3s.io/advanced#configuring-an-http-proxy> |
+
+---
+
+## License
+
+This repository is dual-licensed:
+
+| Content | License |
+|---|---|
+| Code and configuration — everything under [`files/`](files/) and the commands and code samples in this README | [MIT License](LICENSE) |
+| Documentation and diagrams — the prose of this README and everything under [`docs/`](docs/) | [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-CC-BY-4.0) |
+
+You are free to use, adapt and share this material, including commercially. When reusing the documentation or diagrams, give appropriate credit, for example:
+
+> *"Ascender Automation Platform — Enterprise Installation Guide" by Guilherme Filho, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: <https://github.com/biazini/ascender-enterprise-installation>*
+
+This guide is provided "as is", without warranty of any kind. Validate every step in a non-production environment before applying it to production systems.
+
+Ascender is a project of CIQ. Product names, logos and trademarks shown in this repository (including the Ascender sign-in screenshot) belong to their respective owners and are not covered by the licenses above.
