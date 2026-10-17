@@ -857,7 +857,7 @@ This repository is dual-licensed:
 
 You are free to use, adapt and share this material, including commercially. When reusing the documentation or diagrams, give appropriate credit, for example:
 
-> *"Ascender Automation Platform — Enterprise Installation Guide" by Guilherme Filho, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: <https://github.com/biazini/ascender-enterprise-installation>*
+> *"Ascender Automation Platform — Enterprise Installation Guide" by Guilherme Filho, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: <https://github.com/biazini/ascender-k3s-installation>*
 
 This guide is provided "as is", without warranty of any kind. Validate every step in a non-production environment before applying it to production systems.
 
