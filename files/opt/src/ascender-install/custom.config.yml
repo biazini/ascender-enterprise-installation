@@ -1,0 +1,29 @@
+---
+k8s_platform: k3s
+kube_install: true
+download_kubeconfig: true
+k8s_offline: false
+k3s_master_node_ip: "<SERVER_IP>"
+k8s_lb_protocol: https
+tls_crt_path: "/etc/ascender/tls/ascender.crt"
+tls_key_path: "/etc/ascender/tls/ascender.key"
+use_etc_hosts: true
+tmp_dir: "{{ playbook_dir }}/../ascender_install_artifacts"
+
+ASCENDER_HOSTNAME: <ASCENDER_FQDN>
+ASCENDER_DOMAIN: <DOMAIN>
+ASCENDER_NAMESPACE: ascender
+ASCENDER_ADMIN_USER: admin
+ASCENDER_ADMIN_PASSWORD: "<GENERATED_PASSWORD>"
+ASCENDER_IMAGE: ghcr.io/ctrliq/ascender
+ASCENDER_VERSION: 25.6.2
+ascender_garbage_collect_secrets: true
+ascender_setup_playbooks: true
+ascender_replicas: 1
+ascender_image_pull_policy: IfNotPresent
+
+# Optional: trust the corporate CA inside Ascender (internal Git servers, LDAPS, APIs)
+# custom_cacert_bundle: "/etc/ascender/tls/corporate-ca-bundle.crt"
+
+LEDGER_INSTALL: false
+PROXY_INSTALL: false

@@ -1,0 +1,5 @@
+write-kubeconfig-mode: "0600"
+# Additional names/addresses accepted by the kube-apiserver certificate (remote kubectl access)
+tls-san:
+  - "<SERVER_FQDN>"
+  - "<SERVER_IP>"

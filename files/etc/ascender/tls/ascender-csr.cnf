@@ -1,0 +1,20 @@
+[ req ]
+default_bits       = 3072
+prompt             = no
+default_md         = sha256
+distinguished_name = dn
+req_extensions     = v3_req
+
+[ dn ]
+C  = <COUNTRY_CODE>
+O  = <ORGANISATION>
+OU = <ORGANISATIONAL_UNIT>
+CN = <ASCENDER_FQDN>
+
+[ v3_req ]
+keyUsage         = critical, digitalSignature, keyEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName   = @alt_names
+
+[ alt_names ]
+DNS.1 = <ASCENDER_FQDN>
